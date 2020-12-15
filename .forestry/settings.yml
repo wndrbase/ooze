@@ -1,0 +1,32 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: 
+webhook_url: 
+sections:
+- type: directory
+  path: content/projects
+  label: projects
+  create: documents
+  match: "**/*"
+  templates:
+  - project
+- type: directory
+  path: content/blog
+  label: blog
+  create: documents
+  match: "**/*"
+  templates:
+  - blog-post
+upload_dir: ''
+public_path: images
+front_matter_path: "/images"
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_output_directory: public
+  install_dependencies_command: yarn
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: yarn build

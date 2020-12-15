@@ -1,0 +1,41 @@
+---
+label: blog post
+hide_body: false
+fields:
+- name: date
+  type: datetime
+  label: date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+- name: tag
+  type: text
+  config:
+    required: false
+  label: tag
+- name: hero
+  type: file
+  config:
+    maxSize: 64
+  label: hero
+- name: avatar
+  type: file
+  config:
+    maxSize: 64
+  label: avatar
+- name: author
+  type: text
+  config:
+    required: false
+  label: author
+pages:
+- content/blog/a-brief-history-of-travel.md
+- content/blog/the-second-post.md
